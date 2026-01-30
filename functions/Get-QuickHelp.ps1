@@ -33,26 +33,6 @@ Function Get-QuickHelp {
 	----      --------
 	Get-Alias Gets the aliases for the current session.
 
-	.EXAMPLE
-    Get-QuickHelp -Command "Get-Help" -Select SynopsisOnly
-
-    This example retrieves the synopsis for the `Get-Help` command.
-
-	.EXAMPLE
-    Get-QuickHelp -Command "Get-ChildItem" -Select AllExamples
-
-    This example retrieves all examples and additional details for the `Get-ChildItem` command.
-
-	.EXAMPLE
-    Get-QuickHelp -Command "Get-Process", "Get-Service" -Select Detailed
-
-    This example retrieves detailed help information for both the `Get-Process` and `Get-Service` commands, including input/output objects and examples.
-
-	.EXAMPLE
-    qhelp -Command "Set-ExecutionPolicy" -Select AllExamples
-
-    This example retrieves all examples for the `Set-ExecutionPolicy` command using the alias `qhelp`.
-
 	#>
 	[CmdletBinding()]
 	[Alias('qhelp')]
