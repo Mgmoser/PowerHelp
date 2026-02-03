@@ -1,0 +1,205 @@
+<!--
+Format type data generated 01/30/2026 13:51:23 by OGE\mosermg
+
+This file was created using the New-PSFormatXML command that is part
+of the PSScriptTools module.
+
+https://github.com/jdhitsolutions/PSScriptTools
+-->
+<Configuration>
+  <ViewDefinitions>
+    <View>
+      <!--Created 01/30/2026 15:15:51 by OGE\mosermg-->
+      <Name>Default</Name>
+      <ViewSelectedBy>
+        <TypeName>TLDRHelp</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <!--Delete the AutoSize node if you want to use the defined widths.-->
+        <AutoSize />
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>Name</Label>
+            <Width>20</Width>
+            <Alignment>left</Alignment>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>Alias</Label>
+            <Width>20</Width>
+            <Alignment>left</Alignment>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>ModuleName</Label>
+            <Width>20</Width>
+            <Alignment>left</Alignment>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>Synopsis</Label>
+            <Width>100</Width>
+            <Alignment>left</Alignment>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>RequiredParams</Label>
+            <Width>37</Width>
+            <Alignment>left</Alignment>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>WildcardsAllowed</Label>
+            <Width>24</Width>
+            <Alignment>left</Alignment>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>PipelineInputAllowed</Label>
+            <Width>72</Width>
+            <Alignment>left</Alignment>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <!--
+            By default the entries use property names, but you can replace them with script blocks.
+            <ScriptBlock>$_.foo /1mb -as [int]</ScriptBlock>
+-->
+              <TableColumnItem>
+                <PropertyName>Name</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>Alias</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>ModuleName</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>Synopsis</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>RequiredParams</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>WildcardsAllowed</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>PipelineInputAllowed</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <!--Created 01/30/2026 13:51:23 by OGE\mosermg-->
+      <Name>Detailed</Name>
+      <ViewSelectedBy>
+        <TypeName>TLDRHelp</TypeName>
+      </ViewSelectedBy>
+      <ListControl>
+        <listEntries>
+          <listEntry>
+            <ListItems>
+              <!--
+            By default the entries use property names, but you can replace them with script blocks.
+            <ScriptBlock>$_.foo /1mb -as [int]</ScriptBlock>
+-->
+              <ListItem>
+                <Label>Name</Label>
+                <PropertyName>Name</PropertyName>
+              </ListItem>
+              <ListItem>
+                <Label>Alias</Label>
+                <PropertyName>Alias</PropertyName>
+              </ListItem>
+              <ListItem>
+                <Label>ModuleName</Label>
+                <PropertyName>ModuleName</PropertyName>
+              </ListItem>
+              <ListItem>
+                <Label>Synopsis</Label>
+                <PropertyName>Synopsis</PropertyName>
+              </ListItem>
+              <ListItem>
+                <Label>Description</Label>
+                <PropertyName>Description</PropertyName>
+              </ListItem>
+              <ListItem>
+                <Label>Details</Label>
+                <PropertyName>Details</PropertyName>
+              </ListItem>
+              <ListItem>
+                <Label>InputObjects</Label>
+                <PropertyName>InputObjects</PropertyName>
+              </ListItem>
+              <ListItem>
+                <Label>OutputObjects</Label>
+                <PropertyName>OutputObjects</PropertyName>
+              </ListItem>
+              <ListItem>
+                <Label>RequiredParams</Label>
+                <PropertyName>RequiredParams</PropertyName>
+              </ListItem>
+              <ListItem>
+                <Label>WildcardsAllowed</Label>
+                <PropertyName>WildcardsAllowed</PropertyName>
+              </ListItem>
+              <ListItem>
+                <Label>PipelineInputAllowed</Label>
+                <PropertyName>PipelineInputAllowed</PropertyName>
+              </ListItem>
+              <ListItem>
+                <Label>Examples</Label>
+                <PropertyName>Examples</PropertyName>
+              </ListItem>
+            </ListItems>
+          </listEntry>
+        </listEntries>
+      </ListControl>
+    </View>
+    <View>
+      <!--Created 01/30/2026 15:09:25 by OGE\mosermg-->
+      <Name>SynopsisOnly</Name>
+      <ViewSelectedBy>
+        <TypeName>TLDRHelp</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <!--Delete the AutoSize node if you want to use the defined widths.-->
+        <AutoSize />
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>Name</Label>
+            <Width>14</Width>
+            <Alignment>left</Alignment>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>Alias</Label>
+            <Width>12</Width>
+            <Alignment>left</Alignment>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>Synopsis</Label>
+            <Width>61</Width>
+            <Alignment>left</Alignment>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <!--
+            By default the entries use property names, but you can replace them with script blocks.
+            <ScriptBlock>$_.foo /1mb -as [int]</ScriptBlock>
+-->
+              <TableColumnItem>
+                <PropertyName>Name</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>Alias</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>Synopsis</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+  </ViewDefinitions>
+</Configuration>

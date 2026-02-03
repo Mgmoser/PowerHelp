@@ -60,10 +60,14 @@ Copyright = '(c) Mason Moser. All rights reserved.'
 # ScriptsToProcess = @()
 
 # Type files (.ps1xml) to be loaded when importing this module
-# TypesToProcess = @()
+#TypesToProcess = @(
+#	'Internal\Formatting\TLDRHelp.Format'
+#)
 
-# Format files (.ps1xml) to be loaded when importing this module
-# FormatsToProcess = @()
+## Format files (.ps1xml) to be loaded when importing this module
+FormatsToProcess = @(
+	'Internal\Formatting\TLDRHelp.Format'
+)
 
 # Modules to import as nested modules of the module specified in RootModule/ModuleToProcess
 # NestedModules = @()
@@ -129,4 +133,5 @@ PrivateData = @{
 # DefaultCommandPrefix = ''
 
 }
+
 
