@@ -1,5 +1,5 @@
 
-# PowerShellTLDR Module
+# PowerHelp Module
 # Author: Mason Moser
 # Version: 1.0.0
 
