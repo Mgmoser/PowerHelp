@@ -1,5 +1,5 @@
 
-# PowerShellTLDR Module
+# PowerHelp Module
 # Author: Mason Moser
 # Version: 1.0.0
 
@@ -53,7 +53,4 @@ foreach ($folder in $functionFolders) {
 
 # Export functions
 $functions = @(Get-ChildItem -Path "$ModuleRoot\functions\" -Filter "*.ps1" -Recurse -ErrorAction SilentlyContinue).BaseName
-Export-ModuleMember -Function $Functions -Alias *
-
-#Import Custom Objects
-./internal/objects/BetterHelpObject.ps1
+Export-ModuleMember -Function $functions -Alias *

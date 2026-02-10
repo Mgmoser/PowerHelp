@@ -1,5 +1,5 @@
 [PSCustomObject]@{
-	PSTypeName = "TLDRHelp"
+	PSTypeName = "PowerHelp"
 	Name = [String]
 	Alias = [String]
 	ModuleName= [String]
@@ -12,4 +12,5 @@
 	WildcardsAllowed = [String]
 	PipelineInputAllowed = [String]
 	Examples = [String]
+	Oneliners = [String]
 } | Out-Null
