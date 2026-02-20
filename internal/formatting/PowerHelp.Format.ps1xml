@@ -13,6 +13,7 @@
           <TableColumnHeader><Label>ModuleName</Label><Width>20</Width><Alignment>left</Alignment></TableColumnHeader>
           <TableColumnHeader><Label>Synopsis</Label><Width>80</Width><Alignment>left</Alignment></TableColumnHeader>
           <TableColumnHeader><Label>RequiredParams</Label><Width>35</Width><Alignment>left</Alignment></TableColumnHeader>
+          <TableColumnHeader><Label>InputObjects</Label><Width>40</Width><Alignment>left</Alignment></TableColumnHeader>
         </TableHeaders>
         <TableRowEntries>
           <TableRowEntry>
@@ -22,6 +23,7 @@
               <TableColumnItem><PropertyName>ModuleName</PropertyName></TableColumnItem>
               <TableColumnItem><PropertyName>Synopsis</PropertyName></TableColumnItem>
               <TableColumnItem><PropertyName>RequiredParams</PropertyName></TableColumnItem>
+              <TableColumnItem><PropertyName>InputObjects</PropertyName></TableColumnItem>
             </TableColumnItems>
           </TableRowEntry>
         </TableRowEntries>

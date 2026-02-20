@@ -4,9 +4,8 @@ Function Get-PowerHelp {
 	Provides a quick summary of a command's help information.
 
 	.DESCRIPTION
-	The `Get-PowerHelp` function retrieves and formats help information for one or more commands.
+	The `Get-QuickHelp` function retrieves and formats help information for one or more commands.
 	It allows users to select specific details such as the synopsis, examples, or detailed information about the command.
-  This module attempts to be a one-stop-shop for getting help from numerous commands.
 
 	.PARAMETER Name
 	Specifies the name(s) of the command(s) for which help information is retrieved.
@@ -21,9 +20,7 @@ Function Get-PowerHelp {
 	- `Oneliners`: Retrieves a short synopsis plus one-line runnable example commands.
 
 	.EXAMPLE
-  Type a command in or the command's alias into the name parameter to get help you can use fast. Add a preferred format to either get simple info or complex info.
-
-	Get-QuickHelp -Name gal -Format SynopsisOnly
+	Get-QuickHelp -command gal -Format SynopsisOnly
 
 	Name      Synopsis
 	----      --------
@@ -31,39 +28,21 @@ Function Get-PowerHelp {
 
 
 	.EXAMPLE
-  Use the PowerHelp command alias to get help even faster.
-
-	phelp -Name gal -Format SynopsisOnly
+	qhelp -command gal -Format SynopsisOnly
 
 	Name      Synopsis
 	----      --------
 	Get-Alias Gets the aliases for the current session.
 	.EXAMPLE
-  Use Get-Command and pipe the results to PowerHelp to get specific help files fast and filtered by verb, noun, and/or module.
+	>gcm -module Microsoft.powershell.management | qhelp
 
-	Get-Command -module Microsoft.powershell.management | phelp
-
-Name                  Alias                         ModuleName                      Synopsis
-----                  -----                         ----------                      --------
-Set-Clipboard         scb                           Microsoft.PowerShell.Management Sets the contents of the clipboard.
-Test-Connection                                     Microsoft.PowerShell.Management Sends ICMP echo request packets, or pings, to one or more computers.
-Pop-Location          popd                          Microsoft.PowerShell.Management Changes the current location to the location most recently pushed onto…
-  .EXAMPLE
-  Use the shortest command alias for PowerHelp, ph, to get help. Also, use wildcards to get the help you want to see on a topic fast.
-
-  ph *computer*
-
-Name                             Alias ModuleName                      Synopsis                                                       RequiredParams
-----                             ----- ----------                      --------                                                       --------------
-Get-ComputerInfo                 gin   Microsoft.PowerShell.Management Gets a consolidated object of system and operating system ...
-Restart-Computer                       Microsoft.PowerShell.Management Restarts the operating system on local and remote computers.
-Rename-Computer                        Microsoft.PowerShell.Management Renames a computer.                                             NewName
-Stop-Computer                          Microsoft.PowerShell.Management Stops (shuts down) local and remote computers.
-Set-UnattendedComputerName             AutomatedLabUnattended          Set the host name                                               ComputerName
-Get-RGADComputerPermissions            PSRisk                          …
-Get-MpComputerStatus                   ConfigDefender                  …
-Set-LapsADComputerSelfPermission       LAPS                            Set-LapsADComputerSelfPermission…
-
+	Name                  Alias                         ModuleName                      Synopsis                                                                                           RequiredParams                                                                   WildcardsAllowe
+																																		d
+	----                  -----                         ----------                      --------                                                                                           --------------                                                                   ---------------
+	Add-Content           ac                            Microsoft.PowerShell.Management Adds content to the specified items, such as adding words to a file.                               LiteralPath, Path, Value                                                         Exclude, Filte…
+	Clear-Content         clc                           Microsoft.PowerShell.Management Deletes the contents of an item, but does not delete the item.                                     LiteralPath, Path                                                                Exclude, Filte…
+	Clear-Item            cli                           Microsoft.PowerShell.Management Clears the contents of an item, but does not delete the item.                                      LiteralPath, Path                                                                Exclude, Filte…
+	Clear-ItemProperty    clp                           Microsoft.PowerShell.Management Clears the value of a property but does not delete the property.                                   LiteralPath, Name, Path                                                          Exclude, Filte…
 
 	#>
 	[CmdletBinding()]
@@ -74,22 +53,11 @@ Set-LapsADComputerSelfPermission       LAPS                            Set-LapsA
 		[Alias('Command')]
 		[string[]]$Name = "Get-BetterHelp",
 
-		[string[]]$Module,
-
 		[ValidateSet('SynopsisOnly','AllExamples','Detailed','Oneliners')]
 		[string]$Format
 	)
 	begin {
 		$data = [System.Collections.Generic.List[psobject]]::new()
-
-    if($Module){
-      $params = @{
-
-      }
-
-      Get-Command
-
-    }
 	}
 	process {
 		foreach ($commandName in $Name) {
@@ -107,7 +75,6 @@ Set-LapsADComputerSelfPermission       LAPS                            Set-LapsA
 						Alias = (Get-Alias -Definition $h.Name -ErrorAction SilentlyContinue).Name -join ', '
 						ModuleName = "$($h.ModuleName)"
 						Synopsis = $h.Synopsis
-            Syntax   = (Get-Command $h.Name)
 						Description = $h.Description
 						Details = $h.Details
 						InputObjects = ($h.inputTypes | Out-String).Trim()
