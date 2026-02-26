@@ -27,4 +27,7 @@
 
   #In this directory run your Github clone command:
   gh repo clone Mgmoser/PowerHelp
+
+  #Now run the below to import the module.
+  Import-Module PowerHelp -Force -Verbose
   ```
