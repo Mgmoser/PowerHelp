@@ -17,5 +17,5 @@
   Set-Location $HOME\Documents\PowerShell\Modules
 
   #In this directory run your Github clone command:
-  
+  gh repo clone Mgmoser/PowerHelp
   ```
