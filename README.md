@@ -1,4 +1,5 @@
-[![PowerHelpLogo](/internal/images/PowerHelpLogo.png)]
+<img src="/internal/images/PowerHelpLogo.png" alt="PowerHelp Logo" width="70%">
+
 # PowerHelp
 
 ### A simple module that assists the user in getting useful help snippets fast!
