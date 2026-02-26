@@ -1,3 +1,4 @@
+[PowerHelpLogo](/internal/images/PowerHelpLogo.png)
 # PowerHelp
 
 ### A simple module that assists the user in getting useful help snippets fast!
