@@ -14,5 +14,8 @@
   $Env:PSModulePath -split ';'
   #Go to the path where your modules are located. You can also look at other modules and their Path parameters to find where this location is.
   #For example
-  Set-Location $HOME\Power
+  Set-Location $HOME\Documents\PowerShell\Modules
+
+  #In this directory run your Github clone command:
+  
   ```
